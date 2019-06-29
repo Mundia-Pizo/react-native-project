@@ -9,18 +9,6 @@ import firebase from 'react-firebase';
 import {KeyboardSpacer } from 'react-native-keyboard-spacer';
 
 
-const firebaseConfig = {
-    apiKey: "AIzaSyADHhYxelHjsi0YsAEXT9iyLcFA24xlmMg",
-    authDomain: "escroll-ed3c7.firebaseapp.com",
-    databaseURL: "https://escroll-ed3c7.firebaseio.com",
-    projectId: "escroll-ed3c7",
-    storageBucket: "",
-    messagingSenderId: "877689705876",
-    appId: "1:877689705876:web:57bdcc1e00b22054"
-
-
-    
-  };
 
 export default class MessageCenter extends React.Component {
 
