@@ -7,6 +7,7 @@ import Message from './messages';
 import Settings from './settings';
 import Blog from './blog';
 import Logout from './logout';
+import MessageCenter from './messagemain';
 
 
 import {Button, View} from 'react-native';
@@ -26,7 +27,7 @@ import {createSwitchNavigator,
 
 const bottonNavigator=createBottomTabNavigator(
      { 
-        Chat:{screen:Chat },
+        Chat:{screen:MessageCenter },
         Message:{screen:Message},
         Store:{screen:Store},
         Settings:{screen:Settings}, 
@@ -50,7 +51,8 @@ const AppStacknavigator=createStackNavigator(
 {
     bottonNavigator:bottonNavigator,
     Payment:{screen:Payment},
-    blog:{screen:Blog}
+    blog:{screen:Blog},
+    Chat:{screen:MessageCenter},
     
 },
 {
@@ -75,7 +77,7 @@ const AppStacknavigator=createStackNavigator(
 const AppDrawNavigator=createDrawerNavigator({
    Home:AppStacknavigator,
    Store:{screen:Store},
-   Chat:{screen:Chat },
+   chat:{screen:MessageCenter},
    Payment:{screen:Payment},
    Settings:{screen:Settings},
    blog:{screen:Blog},

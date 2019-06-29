@@ -1,5 +1,4 @@
 import React from 'react';
-// import * as firebase from 'expo-firebase-app';
 
 import AppDrawNavigator from './src/screens/AppNavigator';
 
