@@ -73,7 +73,8 @@ export default class MessageCenter extends React.Component {
 
   render() {
     return (
-
+    <View>
+    <View style={{flex:1}}>
       <GiftedChat
       style={{flex:1, paddingBottom:20}}
         forceGetKeyboardHeight={
@@ -87,6 +88,12 @@ export default class MessageCenter extends React.Component {
         }}
         renderMessage={this.renderMessage}
       />
+     
+      </View>
+        <KeyboardAvoidingView behavior={'padding'}/>
+        <KeyboardSpacer/>
+      </View>
+    
     );
   }
 
