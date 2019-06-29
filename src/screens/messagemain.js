@@ -6,6 +6,8 @@ import emojiUtils from 'emoji-utils';
 import  {View, KeyboardAvoidingView} from  'react-native';
 import SlackMessage from './messages';
 import firebase from 'react-firebase';
+import {KeyboardSpacer } from 'react-native-keyboard-spacer';
+import { platform } from 'os';
 
 const firebaseConfig = {
     apiKey: "AIzaSyADHhYxelHjsi0YsAEXT9iyLcFA24xlmMg",
@@ -71,6 +73,7 @@ export default class MessageCenter extends React.Component {
 
   render() {
     return (
+      <View style={{flex:1}}>
       <GiftedChat
         messages={this.state.messages}
         onSend={messages => this.onSend(messages)}
@@ -79,6 +82,8 @@ export default class MessageCenter extends React.Component {
         }}
         renderMessage={this.renderMessage}
       />
+      {platform.OS ==='android'? <KeyboardSpacer/>:null}
+      </View>
     );
   }
 
