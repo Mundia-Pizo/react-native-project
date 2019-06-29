@@ -150,6 +150,7 @@ export default class Bubble extends React.Component {
     return (
       <View style={[styles.container, this.props.containerStyle]}>
         <TouchableOpacity
+          style={{paddingVertical:20}}
           onLongPress={this.onLongPress}
           accessibilityTraits="text"
           {...this.props.touchableProps}

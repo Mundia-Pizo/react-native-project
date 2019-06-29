@@ -7,7 +7,7 @@ import  {View, KeyboardAvoidingView} from  'react-native';
 import SlackMessage from './messages';
 import firebase from 'react-firebase';
 import {KeyboardSpacer } from 'react-native-keyboard-spacer';
-import { platform } from 'os';
+
 
 const firebaseConfig = {
     apiKey: "AIzaSyADHhYxelHjsi0YsAEXT9iyLcFA24xlmMg",
@@ -73,8 +73,14 @@ export default class MessageCenter extends React.Component {
 
   render() {
     return (
-      <View style={{flex:1}}>
+      <KeyboardAvoidingView style={{flex:1}} bahavior={'padding'}>
+
       <GiftedChat
+      style={{flex:1, paddingBottom:20}}
+        forceGetKeyboardHeight={
+            Platform.OS === 'android' && Platform.Version < 21
+           }
+        style={{flex:1}}
         messages={this.state.messages}
         onSend={messages => this.onSend(messages)}
         user={{
@@ -82,8 +88,7 @@ export default class MessageCenter extends React.Component {
         }}
         renderMessage={this.renderMessage}
       />
-       <KeyboardSpacer/>
-      </View>
+      </KeyboardAvoidingView>
     );
   }
 
