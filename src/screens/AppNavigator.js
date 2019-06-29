@@ -22,8 +22,7 @@ import {createSwitchNavigator,
      createBottomTabNavigator,
      Header
      } from 'react-navigation';
-import { createMaterialBottomTabNavigator 
-    } from "react-navigation-material-bottom-tabs";
+
 
 const bottonNavigator=createBottomTabNavigator(
      { 
