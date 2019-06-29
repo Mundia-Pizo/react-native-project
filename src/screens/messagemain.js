@@ -73,7 +73,6 @@ export default class MessageCenter extends React.Component {
 
   render() {
     return (
-      <KeyboardAvoidingView style={{flex:1}} bahavior={'padding'}>
 
       <GiftedChat
       style={{flex:1, paddingBottom:20}}
@@ -88,7 +87,6 @@ export default class MessageCenter extends React.Component {
         }}
         renderMessage={this.renderMessage}
       />
-      </KeyboardAvoidingView>
     );
   }
 

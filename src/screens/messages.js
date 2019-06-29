@@ -65,7 +65,7 @@ render(){
     const marginBottom=isSameUser(this.props.currentMessage, this.props.nextMessage) ? 2:10;
     return(
         <View 
-        style={[styles.container, {marginBottom}, this.props.containerStyle]} >
+        style={[styles.container, {marginBottom:10}, this.props.containerStyle]} >
           {this.renderAvatar}
           {this.renderBubble}
         </View>
