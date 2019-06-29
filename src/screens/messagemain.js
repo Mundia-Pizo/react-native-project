@@ -3,7 +3,7 @@ import { Platform } from 'react-native';
 import PropTypes from 'prop-types';
 import { GiftedChat } from 'react-native-gifted-chat';
 import emojiUtils from 'emoji-utils';
-import  {View} from  'react-native';
+import  {View, KeyboardAvoidingView} from  'react-native';
 import SlackMessage from './messages';
 import firebase from 'react-firebase';
 
@@ -71,7 +71,6 @@ export default class MessageCenter extends React.Component {
 
   render() {
     return (
-      <KeyboardAvoidingView>
       <GiftedChat
         messages={this.state.messages}
         onSend={messages => this.onSend(messages)}
@@ -80,7 +79,6 @@ export default class MessageCenter extends React.Component {
         }}
         renderMessage={this.renderMessage}
       />
-    </KeyboardAvoidingView>
     );
   }
 
