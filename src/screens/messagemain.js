@@ -82,7 +82,7 @@ export default class MessageCenter extends React.Component {
         }}
         renderMessage={this.renderMessage}
       />
-      {platform.OS ==='android'? <KeyboardSpacer/>:null}
+       <KeyboardSpacer/>
       </View>
     );
   }
