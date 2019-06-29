@@ -71,6 +71,7 @@ export default class MessageCenter extends React.Component {
 
   render() {
     return (
+      <KeyboardAvoidingView>
       <GiftedChat
         messages={this.state.messages}
         onSend={messages => this.onSend(messages)}
@@ -79,7 +80,7 @@ export default class MessageCenter extends React.Component {
         }}
         renderMessage={this.renderMessage}
       />
-   
+    </KeyboardAvoidingView>
     );
   }
 
